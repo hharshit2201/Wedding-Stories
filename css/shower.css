@@ -1,0 +1,22 @@
+.flowers { margin:0; overflow:auto; }
+    .lane{position:absolute;top:0;left:0;width:10%;pointer-events:none;overflow:hidden}
+    .lane.left{left:0}
+    .lane.right{right:0;left:auto}
+    .flower{position:absolute;animation-name:fall;animation-timing-function:linear;animation-iteration-count:1;opacity:.95;will-change:transform,opacity}
+@keyframes fall {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateX(15px) translateY(150vh) rotate(180deg);
+    }
+    100% {
+        transform: translateX(-15px) translateY(300vh) rotate(360deg);
+    }
+}
+    .fade-out{animation-name:fadeOut;animation-duration:.6s;animation-fill-mode:forwards}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Hearts, One Story 🌸💍</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cricket.css">
+    <link rel="stylesheet" href="css/shower.css">
+    <!-- Mobile-specific CSS overrides -->
+    <link rel="stylesheet" href="css/mobile/styles.mobile.css" media="screen and (max-width: 480px)">
+    <link rel="stylesheet" href="css/mobile/cricket.mobile.css" media="screen and (max-width: 480px)">
+    <link rel="stylesheet" href="css/mobile/shower.mobile.css" media="screen and (max-width: 480px)">
+    <link rel="stylesheet" href="css/mobile/countdown.mobile.css" media="screen and (max-width: 480px)">
+    <link rel="import" href="html/cricket.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tone.js for generating sound effect programmatically -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- MUSIC PLAYER -->
+        <div class="music-player">
+            <audio id="bgMusic">
+                <source src="audio/playlist/bhootni_ke.mp3" type="audio/mpeg">
+            </audio>
+            <div class="music-controls">
+                <button id="prevTrack" class="track-control">⏮️</button>
+                <button id="musicControl" class="music-control">
+                    <span class="music-icon">🔊</span>
+                </button>
+                <button id="nextTrack" class="track-control">⏭️</button>
+                <div class="track-info">
+                    <span id="trackName">Track 1</span>
+                </div>
+            </div>
+        </div>
+       
+        <!-- HEADER -->
+        <header class="main-header">
+            <h1 class="site-title">Save the Date</h1>
+        </header>
+        <div class="flowers">
+          <div class="lane left"></div>
+          <div class="lane right"></div>
+        </div>
+       
+        <!-- TABS -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('wedding1')">Doctor's Wedding</button>
+            <button class="tab-btn" onclick="openTab('wedding2')">Actor's Wedding</button>
+        </div>
+
+        <!-- RISHABH -->
+        <div id="wedding1" class="tab-content active">
+            <div class="dulha-sang-dulhan">
+                <div class="dulha">Rishabh</div>
+                <div class="sang">Weds</div>
+                <div class="dulhan">Aishwarya</div>
+            </div>
+            <!-- COUNTDOWN -->
+            <div class="countdown-container">
+                <div id="countdown1" class="countdown"></div>
+            </div>
+
+            <!-- WEDDING DETAILS -->
+            <div class="wedding-details">
+                <h2>Wedding Details</h2>
+                
+                <!-- Planes between source and destination -->
+                <div class="aeroplane-route">
+                    <!-- SVG area -->
+                    <div class="svg-wrap">
+                        <svg id="stage" viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" aria-label="Plane route starter">
+                        <path id="route-1" d="M 80 180 C 200 100, 320 260, 440 180 C 560 100, 680 260, 820 180" fill="none" stroke="#ffb6c1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 8" />
+                        <!-- Paper plane (new) -->
+                        <g id="plane-1" transform="translate(80,180) rotate(0)">
+                            <g id="paperPlane" transform="scale(0.7) translate(-12,-20)">
+                            <path d="M12 8 L66 28 L12 48 L24 28 Z" fill="#ffffff" stroke="#2b2b2b" stroke-width="1" />
+                            <path d="M12 8 L66 28 L40 26 Z" fill="#e6e6e6" opacity="0.6" />
+                            <path d="M24 28 L44 24" stroke="#2b2b2b" stroke-width="0.9" stroke-linecap="round" opacity="0.4" />
+                            <path d="M12 48 L26 34" stroke="#2b2b2b" stroke-width="0.9" stroke-linecap="round" opacity="0.35" />
+                            </g>
+                        </g>
+                        </svg>
+                        <div class="pin" style="left:8.89%; top:50%;">
+                        <div class="design">Lucknow</div>
+                        </div>
+                        <div class="pin" style="left:91.11%; top:50%;">
+                        <div class="design">Sasaram</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wedding-date">Date: November 24, 2025</div>
+            </div>
+
+            <!-- ENVELOPE OPENER-->
+            <div class="envelope-wrapper">
+                            <div class="envelope" id="envelope-1">
+                                <div class="envelope-flap" id="envelope-flap-1"></div>
+                                <div class="envelope-content" id="envelope-content-1">
+                                    <div class="letter">
+                                        <h2>महाशय ऋषभ के लिए विवाह निमंत्रण</h2>
+                                        <p>महाशय ऋषभ, दुखी मन से सूचित किया जाता है कि आपकी शादी 24 नवंबर, 2025 को तय है। अपनी उपस्थिति दर्ज़ कराकर इस कार्यक्रम को मंगलमय करें; भागने की कोशिश न करें, कड़ी निगरानी है!</p>
+                                        <p class="signature">शुभकामनाएं,<br>बजरंग दल!</p>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+
+            <!-- CRICKET-->
+            <div class="cricket-container">
+                <!-- The Animation Area -->
+                <div id="pitch-2" class="border-4 border-gray-900 rounded-lg shadow-2xl">
+                    <div id="wicket-container-2">
+                        <!-- Bails -->
+                        <div id="bail-left-2" class="bail"></div>
+                        <div id="bail-right-2" class="bail"></div>
+                        
+                        <!-- Stumps (Individual elements for separate fall) -->
+                        <div id="stump-1-2" class="stump"></div>
+                        <div id="stump-2-2" class="stump"></div>
+                        <div id="stump-3-2" class="stump"></div>
+                    </div>
+
+                    <!-- Ball -->
+                    <div id="ball-2"></div>
+
+                    <!-- Wicket Down Text -->
+                    <div id="wicket-down-text-2">
+                                            <span id="duck-emoji-2">😭🦆</span>
+                                            1st WICKET DOWN!
+                    </div>
+                </div>
+
+                <!-- Control Button -->
+                <button id="animate-btn-2" 
+                        class="mt-8 px-6 py-3 bg-red-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-red-700 transition duration-150 transform hover:scale-105 active:scale-95">
+                    BOWL THE BALL
+                </button>
+
+                <!-- Status Message -->
+                <div id="status-2" class="mt-4 text-lg font-semibold text-gray-700 h-6">Ready to Bowl!</div>
+            </div>
+        </div>
+
+        <!-- BHASKAR -->
+        <div id="wedding2" class="tab-content">
+            <div class="dulha-sang-dulhan">
+                <div class="dulha">Bhaskar</div>
+                <div class="sang">Weds</div>
+                <div class="dulhan">Jyoti</div>
+            </div>
+
+            <!-- COUNTDOWN -->
+            <div class="countdown-container">
+                <div id="countdown2" class="countdown"></div>
+            </div>
+
+            <!-- WEDDING DETAILS -->
+            <div class="wedding-details">
+                <h2>Wedding Details</h2>
+                
+                <!-- Planes between source and destination -->
+                <div class="aeroplane-route">
+                    <!-- SVG area -->
+                    <div class="svg-wrap">
+                        <svg id="stage" viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" aria-label="Plane route starter">
+                        <path id="route-2" d="M 80 180 C 200 100, 320 260, 440 180 C 560 100, 680 260, 820 180" fill="none" stroke="#ffb6c1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 8" />
+                        <!-- Paper plane (new) -->
+                        <g id="plane-2" transform="translate(80,180) rotate(0)">
+                            <g id="paperPlane" transform="scale(0.7) translate(-12,-20)">
+                            <path d="M12 8 L66 28 L12 48 L24 28 Z" fill="#ffffff" stroke="#2b2b2b" stroke-width="1" />
+                            <path d="M12 8 L66 28 L40 26 Z" fill="#e6e6e6" opacity="0.6" />
+                            <path d="M24 28 L44 24" stroke="#2b2b2b" stroke-width="0.9" stroke-linecap="round" opacity="0.4" />
+                            <path d="M12 48 L26 34" stroke="#2b2b2b" stroke-width="0.9" stroke-linecap="round" opacity="0.35" />
+                            </g>
+                        </g>
+                        </svg>
+                        <div class="pin" style="left:8.89%; top:50%;">
+                        <div class="design">Ballia</div>
+                        </div>
+                        <div class="pin" style="left:91.11%; top:50%;">
+                        <div class="design">Azamgarh</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wedding-date">Date: December 04, 2025</div>
+            </div>
+
+            <!-- ENVELOPE OPENER-->
+            <div class="envelope-wrapper">
+                            <div class="envelope envelope-2" id="envelope-2">
+                                <div class="envelope-flap" id="envelope-flap-2"></div>
+                                <div class="envelope-content" id="envelope-content-2">
+                                    <div class="letter">
+                                        <h2>प्रिय Actor महोदय के लिए विवाह निमंत्रण!</h2>
+                                        <p>महाशय भास्कर, अब आपके Acting के दिन लद गए!<br>
+            कौन? क्या? मेरी शादी है? मुझसे बात कर रहा है क्या?
+इन सभी शब्दों का प्रयोग वर्जित है।
+            अन्यथा 04 दिसम्बर, 2025 से भौजाई + बेलन (Best Combination) ।</p>
+                                        <p class="signature">शुभकामनाएं,<br>बजरंग दल!</p>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+
+            <!-- CRICKET-->
+            <div class="cricket-container">
+                <!-- The Animation Area -->
+                <div id="pitch" class="border-4 border-gray-900 rounded-lg shadow-2xl">
+                    <div id="wicket-container">
+                        <!-- Bails -->
+                        <div id="bail-left" class="bail"></div>
+                        <div id="bail-right" class="bail"></div>
+                        
+                        <!-- Stumps (Individual elements for separate fall) -->
+                        <div id="stump-1" class="stump"></div>
+                        <div id="stump-2" class="stump"></div>
+                        <div id="stump-3" class="stump"></div>
+                    </div>
+
+                    <!-- Ball -->
+                    <div id="ball"></div>
+
+                    <!-- Wicket Down Text -->
+                    <div id="wicket-down-text">
+                        <span id="duck-emoji">😭🦆🦆</span>
+                        2nd WICKET DOWN!
+                    </div>
+                </div>
+
+                <!-- Control Button -->
+                <button id="animate-btn" 
+                        class="mt-8 px-6 py-3 bg-red-600 text-white font-bold text-lg rounded-xl shadow-lg hover:bg-red-700 transition duration-150 transform hover:scale-105 active:scale-95">
+                    BOWL THE BALL
+                </button>
+
+                <!-- Status Message -->
+                <div id="status" class="mt-4 text-lg font-semibold text-gray-700 h-6">Ready to Bowl!</div>
+            </div>
+
+            <!-- GALLERY-->
+            <!-- <div class="gallery-container">
+                <div class="slideshow-container">
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/237/800/600" alt="Wedding Photo 1">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/238/800/600" alt="Wedding Photo 2">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/239/800/600" alt="Wedding Photo 3">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/240/800/600" alt="Wedding Photo 4">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/241/800/600" alt="Wedding Photo 5">
+                    </div>
+                    <div class="slides fade">
+                        <img src="https://picsum.photos/id/242/800/600" alt="Wedding Photo 6">
+                    </div>
+                    <a class="prev" onclick="changeSlide(-1)">❮</a>
+                    <a class="next" onclick="changeSlide(1)">❯</a>
+                </div>
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div> -->
+        </div>
+        <footer class="footer">
+            <p class="credit">Created & Designed by</p>&nbsp;
+            <div class="credit-name">&nbsp;Harshit Anurag&nbsp;</div>&nbsp;
+            &copy;
+        </footer>
+    </div>
+        <script src="js/main.js"></script>
+        <script src="js/countdown.js"></script>
+        <script src="js/slideshow.js"></script>
+        <script src="js/music.js"></script>
+        <script src="js/envelope.js"></script>
+        <script src="js/cricket.js"></script>
+        <script src="js/flowers.js"></script>
+        <script src="js/aeroplane.js"></script>
+</body>
+</html>

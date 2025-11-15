@@ -1,0 +1,10 @@
+/* Mobile-specific overrides for shower.css */
+@media screen and (max-width: 480px) {
+  .lane {
+    width: 100% !important;
+  }
+  .flower {
+    width: 30px;
+    height: 30px;
+  }
+}

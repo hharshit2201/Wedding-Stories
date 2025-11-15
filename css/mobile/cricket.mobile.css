@@ -1,0 +1,63 @@
+/* Mobile-specific overrides for cricket.css */
+@media screen and (max-width: 480px) {
+  #pitch {
+    height: 180px;
+    max-width: 100vw;
+  }
+  #pitch-2 {
+    height: 180px;
+    max-width: 100vw;
+  }
+  #wicket-container {
+    right: 10px;
+    bottom: 10px;
+    height: 80px;
+    width: 30px;
+  }
+  #wicket-container-2 {
+    right: 10px;
+    bottom: 10px;
+    height: 80px;
+    width: 30px;
+  }
+  .stump {
+    width: 5px;
+  }
+  #stump-1-2, #stump-2-2, #stump-3-2 {
+    width: 5px;
+  }
+  .bail {
+    height: 6px;
+    width: 12px;
+    top: -6px;
+  }
+  #bail-left-2, #bail-right-2 {
+    height: 6px;
+    width: 12px;
+    top: -6px;
+  }
+  #ball {
+    width: 15px;
+    height: 15px;
+    left: -15px;
+    top: 80px;
+  }
+  #ball-2 {
+    width: 15px;
+    height: 15px;
+    left: -15px;
+    top: 80px;
+  }
+  #wicket-down-text {
+    font-size: 1rem;
+  }
+  #wicket-down-text-2 {
+    font-size: 1rem;
+  }
+  #duck-emoji {
+    font-size: 2rem;
+  }
+  #duck-emoji-2 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Gold ring encircling heart, no diamond -->
+  <ellipse cx="32" cy="34" rx="26" ry="20" fill="none" stroke="#ffd700" stroke-width="4"/>
+  <path d="M32 58s-22-13.7-22-30A14 14 0 0 1 32 14a14 14 0 0 1 22 14c0 16.3-22 30-22 30z" fill="#d72660" stroke="#fff" stroke-width="2"/>
+</svg>
